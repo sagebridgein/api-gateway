@@ -33,6 +33,15 @@ services:
       - "9092:9092/tcp"
     networks:
       apisix:
+  dashboard:
+    image: apache/apisix-dashboard
+    restart: always
+    volumes:
+      - ./conf.yml:/usr/local/apisix-dashboard/conf/conf.yaml:ro
+    ports:
+      - "9000:9000/tcp"
+    networks:
+      apisix:
 
   etcd:
     image: bitnami/etcd:latest
