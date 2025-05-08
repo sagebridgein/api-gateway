@@ -35,7 +35,7 @@ services:
       apisix:
 
   etcd:
-    image: rancher/coreos-etcd:v3.4.15-arm64
+    image: bitnami/etcd:latest
     user: root
     restart: always
     volumes:
