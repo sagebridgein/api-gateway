@@ -46,7 +46,7 @@ services:
       apisix:
 
   etcd:
-    image: bitnami/etcd:latest
+    image: bitnami/etcd:3.4.9
     container_name: etcd
     user: root
     restart: always
