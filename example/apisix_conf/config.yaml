@@ -18,6 +18,14 @@
 apisix:
   node_listen: 9080              # APISIX listening port
   enable_ipv6: false
+  proxy_mode: http&stream
+  stream_proxy:
+    tcp:
+      - 9100 # listen on 9100 ports of all network interfaces for TCP requests
+      - "127.0.0.1:9101"
+    udp:
+      - 9200 # listen on 9200 ports of all network interfaces for UDP requests
+      - "127.0.0.1:9211"
 
   enable_control: true
   control:
