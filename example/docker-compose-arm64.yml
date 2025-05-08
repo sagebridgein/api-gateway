@@ -46,7 +46,7 @@ services:
       apisix:
 
   etcd:
-    image: bitnami/etcd:3.4.9
+    image: rancher/coreos-etcd:v3.4.15-arm64
     container_name: etcd
     user: root
     restart: always
