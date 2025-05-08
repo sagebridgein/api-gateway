@@ -63,7 +63,7 @@ services:
       apisix:
 
   web2:
-    image: nginx:1.19.0-alpine
+    image: nginx:1.25.0-alpine
     restart: always
     volumes:
       - ./upstream/web2.conf:/etc/nginx/nginx.conf
